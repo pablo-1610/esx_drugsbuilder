@@ -53,7 +53,13 @@ local actions = {
         end
         
         xPlayer.removeInventoryItem(requieredItem, requieredCount)
-        xPlayer.addMoney(reward)
+        if Config.rewardType == 0 then
+            xPlayer.addMoney(reward)
+        elseif Config.rewardType == 1 then
+            xPlayer.addAccountMoney("black_money", reward)
+        else
+            xPlayer.addMoney(reward)
+        end
 
         TriggerClientEvent("esx:showNotification", source, (Config.messages.sell.onDone):format(requieredCount, xPlayer.getInventoryItem(requieredItem).label, reward))
     end

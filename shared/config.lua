@@ -1,5 +1,13 @@
 Config = {
     log = true,
+    --[[
+
+        RewardType:
+        0 : Argent propre
+        1 : Argent sale
+
+    ]]
+    rewardType = 0,
     delayBetweenActions = 1000, -- 1 seconde
     allowedLicense = {
         ["license:8fc3f9bf5017c451d19593ae7d1105989d6635e0"] = true -- Pablo
