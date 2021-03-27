@@ -150,7 +150,7 @@ function openMenu(drugs)
                         if result ~= nil then builder.rawItem = result end
                     end
                 end)
-                RageUI.ButtonWithStyle(colors[actualColor].."→ ~s~Item traité"..valueNotDefault(builder.tratedItem), "~y~Description: ~s~vous permets de définir l'item traité", {}, true, function(_,_,s)
+                RageUI.ButtonWithStyle(colors[actualColor].."→ ~s~Item traité"..valueNotDefault(builder.treatedItem), "~y~Description: ~s~vous permets de définir l'item traité", {}, true, function(_,_,s)
                     if s then
                         local result = input("Drugs builder", "", 20, false)
                         if result ~= nil then builder.treatedItem = result end
