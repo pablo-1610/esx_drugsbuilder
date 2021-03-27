@@ -192,17 +192,20 @@ function openMenu(drugs)
                 RageUI.Separator("↓ ~o~Configuration des points ~s~↓")
                 RageUI.ButtonWithStyle(colors[actualColor].."→ ~s~Position récolte"..okIfDef(builder.harvest), "~y~Description: ~s~vous permets de définir la position de la récolte", {RightLabel = "~b~Définir ~s~→→"}, true, function(_,_,s)
                     if s then
-                        builder.harvest = GetEntityCoords(PlayerPedId())
+                        local pos = GetEntityCoords(PlayerPedId())
+                        builder.harvest = {x = pos.x, y = pos.y, z = pos.z}
                     end
                 end)
                 RageUI.ButtonWithStyle(colors[actualColor].."→ ~s~Position traitement"..okIfDef(builder.treatement), "~y~Description: ~s~vous permets de définir la position du traitement", {RightLabel = "~b~Définir ~s~→→"}, true, function(_,_,s)
                     if s then
-                        builder.treatement = GetEntityCoords(PlayerPedId())
+                        local pos = GetEntityCoords(PlayerPedId())
+                        builder.treatement = {x = pos.x, y = pos.y, z = pos.z}
                     end
                 end)
                 RageUI.ButtonWithStyle(colors[actualColor].."→ ~s~Position revente"..okIfDef(builder.vendor), "~y~Description: ~s~vous permets de définir la position de la revente", {RightLabel = "~b~Définir ~s~→→"}, true, function(_,_,s)
                     if s then
-                        builder.vendor = GetEntityCoords(PlayerPedId())
+                        local pos = GetEntityCoords(PlayerPedId())
+                        builder.vendor = {x = pos.x, y = pos.y, z = pos.z}
                     end
                 end)
                 -- Interactions
